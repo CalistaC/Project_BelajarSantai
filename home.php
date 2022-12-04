@@ -76,6 +76,7 @@
             height: 248px;
             width: 248px;
             border-radius: 10px;
+            box-shadow: 0px 0px 0px 0px #0000001A, 0px 1px 2px 0px #0000001A, 0px 3px 3px 0px #00000017, 0px 7px 4px 0px #0000000D, 0px 13px 5px 0px #00000003, 0px 20px 6px 0px #00000000;
         }
     </style>
 </head>
@@ -126,7 +127,9 @@
                 </div> 
                 <div class="col-12">
                     <div class="col course-box">
-                        ehe
+                        <div class="course">
+                            EHE
+                        </div>
                     </div>
                 </div>
             </div>
