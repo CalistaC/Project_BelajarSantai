@@ -62,7 +62,6 @@
             font-size: 1.563rem; /* 25px */
             font-weight: 700;
             line-height: 1.905rem; /* 30.48px */
-            margin: 0 0 18px 0;
         }
         .page-tabs-link {
             color: #F39835;
@@ -73,6 +72,7 @@
             text-decoration: underline;
         }
         .course-box {
+            margin: 18px 0 0 0;
             height: 248px;
             width: 248px;
             border-radius: 10px;
@@ -100,8 +100,23 @@
             font-weight: 700;
             line-height: 14.63px;
         }
+        #add-course {
+            margin: 18px 0 0 0;
+        }
+        #add-course .add-course-default {
+            display: inline-block;
+        }
+        #add-course:hover .add-course-default {
+            display: none;
+        }
+        #add-course .add-course-hover {
+            display: none;
+        }
+        #add-course:hover .add-course-hover {
+            display: inline-block;
+        }
         .instructor-box {
-            margin: 16px 0 0 0;
+            margin: 34px 0 66px 0;
             width: 664px;
             height: 160px;
             border-radius: 10px;
@@ -111,13 +126,19 @@
         .instructor-pic {
             width: 160px;
             height: 160px;
-            margin: -1rem 0 0 0;
+            margin: -1rem 0 0 1rem;
             border-radius: 10px;
             background: url(img/justinthames-instructor.png);
             display: inline-block;
         }
         .instructor-detail {
             display: inline-block;
+            width: 440px;
+            margin: 0 0 0 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 19.5px;
+            text-align: justify;
         }
     </style>
 </head>
@@ -170,7 +191,7 @@
                <div class="col-12 page-tabs">
                     <a href="#" class="page-tabs-link">Kursus Saya</a>
                 </div> 
-                <div class="col-12">
+                <div class="col-12 d-flex">
                     <!-- Kyknya bs taru looping utk generate boxnya -->
                     <div class="col-3 course-box">
                         <div class="course"> 
@@ -183,6 +204,18 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-1">
+                        <a href="#" id="add-course" class="text-center">
+                            <div id="add-course-button">
+                                <img src="img/add-course-button-default.svg" alt="Add Course" class="add-course-default">
+                                <img src="img/add-course-button-hover.svg" alt="Add Course Hover" class="add-course-hover">
+                            </div>
+                            <div >
+                                <span>Add Course</span>
+                            </div>
+                        </a>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -196,7 +229,7 @@
                     <div class="col instructor-box">
                         <div class="instructor-pic"></div>
                         <div class="instructor-detail">
-                            ehe
+                            <span>Justin Thames memiliki minat terkait statistika dan pengolahan data menggunakan bahasa pemrograman Python. Salah satu penelitian yang pernah dilakukan dalam topik analisis data adalah dengan menggunakan bahasa pemrograman Python dan aplikasi Rapid Miner.</span>
                         </div>
                     </div>
                 </div>
