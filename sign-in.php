@@ -36,12 +36,35 @@
                 height: 40px;
                 background-color: hotpink;
             }
+
+            .welcome {
+                font-size: 1.563rem;
+                font-weight: 700;
+                line-height: 1.875rem;
+                display: block;
+            }
         
         </style>
     </head>
     <body class="container-fluid d-flex main_container justify-content-center align-items-center">
-        <div id="main-box" class="d-flex">
-            ehe
+        <div id="main-box" class="justify-content-center container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Image -->
+                    <img src="img/belajarsantailogo-header.svg" alt="logobelajarsantai" style="width: 7.5rem; height: 7.5rem; display: block; margin: 1.5rem 0 0 0;">
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Welcome -->
+                    <span id="welcome">
+                        Selamat Datang Kembali!
+                    </span>
+                </div>
+           </div>
+
         </div>
     </body>
 </html>
