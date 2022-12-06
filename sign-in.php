@@ -18,16 +18,28 @@
                 background-color: #3590F3;
                 font-family: Montserrat;
                 font-size: 100%;
+                display: inline-block;
+                height: 100vh;
             }
-
+            #main-box {
+                background-color: #FFFFFF;
+                width: 32.5rem; /* 520px */
+                height: 35rem; /* 560px */
+                border-radius: 10px;
+                padding: 0;
+                margin: 0;
+            }
+            .form-text-box {
+                width: 400px;
+                height: 40px;
+                background-color: hotpink;
+            }
         
         </style>
     </head>
-    <body class="d-flex text-center">
-        <div class="container-fluid main_container d-flex text-center">
-            <div id="main-box">
-                <h1>Hahhahahihihuhuhu</h1>
-            </div>
+    <body class="container-fluid d-flex main_container justify-content-center align-items-center">
+        <div id="main-box" class="d-flex">
+            ehe
         </div>
     </body>
 </html>
