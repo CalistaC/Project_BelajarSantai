@@ -29,7 +29,7 @@
         }
         #overview-box {
             height: 12.5rem; /* 200px */
-            border: 1px solid rgba(217, 217, 217, 0.5);
+            border: 0.063rem solid rgba(217, 217, 217, 0.5);
             border-radius: 0.625rem; /* 10px */
             margin: 2rem 0 0 0;
             padding: 1rem; /* 16px */
@@ -72,19 +72,19 @@
             text-decoration: underline;
         }
         .course-box {
-            margin: 18px 36px 0 0;
-            height: 248px;
-            width: 248px;
-            border-radius: 10px;
+            margin: 1.125rem 2.25rem 0 0;/* 18px 36px 0 0 */
+            height: 15.5rem; /* 248px */
+            width: 15.5rem; /* 248px */
+            border-radius: 0.625rem; /* 10px */
             box-shadow: 0px 0px 0px 0px #0000001A, 0px 1px 2px 0px #0000001A, 0px 3px 3px 0px #00000017, 0px 7px 4px 0px #0000000D, 0px 13px 5px 0px #00000003, 0px 20px 6px 0px #00000000;
         }
         .course-box:hover {
             box-shadow: 0px 0px 0px 0px #0000001A, 0px 2px 4px 0px #0000001A, 0px 7px 7px 0px #00000017, 0px 16px 9px 0px #0000000D, 0px 28px 11px 0px #00000003, 0px 44px 12px 0px #00000000;
         }
         .course-pic {
-            width: 248px;
-            height: 160px;
-            border-radius: 10px 10px 0 0;
+            width: 15.5rem; /* 248px */
+            height: 10rem; /* 160px */
+            border-radius: 0.625rem 0.625rem 0 0; /* 10px 10px 0 0 */
             background: url(img/statistika-course-pic.png);
         }
         .course-name-instructor{
@@ -93,25 +93,25 @@
         .course-name-instructor #course-title{
             font-size: 1rem;
             font-weight: 700;
-            line-height: 19.5px;
+            line-height: 1.219rem; /* 19.5px */
         }
         .course-name-instructor #course-instructor {
-            font-size: 12px;
+            font-size: 0.75rem; /* 12px */
             font-weight: 700;
-            line-height: 14.63px;
+            line-height: 0.914rem; /* 14.63px */
         }
         #add-course-margin {
-            margin: 18px 0 0 0;
+            margin: 1.125rem 0 0 0; /* 18px 0 0 0 */
         }
         #add-course {
             font-size: 1rem;
             font-weight: 700;
-            line-height: 19.5px;
+            line-height: 1.219rem; /* 19.5px */
             color: #F39835;
             text-decoration: none;
         }
         #add-course-button {
-            margin: 0 0 10px 0;
+            margin: 0 0 0.625rem 0; /* 10px */
         }
         #add-course:hover {
             color: #D5852E;
@@ -132,28 +132,28 @@
             display: inline-block;
         }
         .instructor-box {
-            margin: 34px 0 66px 0;
-            width: 664px;
-            height: 160px;
-            border-radius: 10px;
-            border: 1px solid rgba(217, 217, 217, 0.5);
+            margin: 2.125rem 0 4.125rem 0; /* 34px 0 66px 0 */
+            width: 41.5rem; /* 664px */
+            height: 10rem; /* 160px */
+            border-radius: 0.625rem; /* 10px */
+            border: 0.063rem solid rgba(217, 217, 217, 0.5);
             box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 8px 8px 0px rgba(0, 0, 0, 0.09), 0px 17px 10px 0px rgba(0, 0, 0, 0.05), 0px 31px 12px 0px rgba(0, 0, 0, 0.01),  0px 48px 14px 0px rgba(0, 0, 0, 0);
         }
         .instructor-pic {
-            width: 160px;
-            height: 160px;
+            width: 10rem; /* 160px */
+            height: 10rem; /* 160px */
             margin: -1rem 0 0 1rem;
-            border-radius: 10px;
+            border-radius: 0.625rem; /* 10px */
             background: url(img/justinthames-instructor.png);
             display: inline-block;
         }
         .instructor-detail {
             display: inline-block;
-            width: 440px;
+            width: 27.5rem; /* 440px */
             margin: 0 0 0 1.5rem;
             font-size: 1rem;
             font-weight: 500;
-            line-height: 19.5px;
+            line-height: 1.219rem; /* 19.5px */
             text-align: justify;
         }
     </style>
