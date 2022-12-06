@@ -205,7 +205,7 @@
         <div class="row">
             <div id="courses">
                <div class="col-12 page-tabs">
-                    <a href="#" class="page-tabs-link">Kursus Saya</a>
+                    <a href="courses.php" class="page-tabs-link">Kursus Saya</a>
                 </div> 
                 <div class="col-12 d-flex">
                     <!-- Kyknya bs taru looping utk generate boxnya -->
@@ -221,7 +221,7 @@
                         </div>
                     </div>
                     <div id="add-course-margin" class="col-1 d-flex align-items-center">
-                        <a href="#" id="add-course" class="text-center">
+                        <a href="courses.php" id="add-course" class="text-center">
                             <div id="add-course-button">
                                 <img src="img/add-course-button-default.svg" alt="Add Course" class="add-course-default">
                                 <img src="img/add-course-button-hover.svg" alt="Add Course Hover" class="add-course-hover">
@@ -239,7 +239,7 @@
         <div class="row">
             <div id="our-instructors">
                 <div class="col-12 page-tabs">
-                        <a href="#" class="page-tabs-link">Instruktur Kami</a>
+                    <a href="#" class="page-tabs-link">Instruktur Kami</a>
                 </div> 
                 <div class="col-12">
                     <div class="col instructor-box">

@@ -177,13 +177,13 @@
             <aside class="d-flex fixed-top">
                 <!-- Sidebar Buttons -->
                 <nav id="sidebar" class="list-group">
-                    <button type="button" class="list-group-item list-group-item-action <?php if($this_page=='beranda'){echo 'active';}?>" href="home.php">
+                    <button type="button" class="list-group-item list-group-item-action <?php if($this_page=='beranda'){echo 'active';}?>" onclick="location.href='home.php'">
                         Beranda
                     </button>
-                    <button type="button" class="list-group-item list-group-item-action <?php if($this_page=='kursus' or $this_page=='kursus-detail'){echo 'active';}?>" href="">
+                    <button type="button" class="list-group-item list-group-item-action <?php if($this_page=='kursus' or $this_page=='kursus-detail'){echo 'active';}?>" onclick="location.href='courses.php'">
                         Kursus
                     </button>
-                    <button type="button" class="list-group-item list-group-item-action <?php if($this_page=='tentang-kami'){echo 'active';}?>" href="">
+                    <button type="button" class="list-group-item list-group-item-action <?php if($this_page=='tentang-kami'){echo 'active';}?>" onclick="location.href='#'">
                         Tentang Kami
                     </button>
                 </nav>
