@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Beranda BelajarSantai</title>
+    <title>BelajarSantai | Beranda</title>
     <style>
         #greeting {
             font-size: 1.563rem; /* 25px */
@@ -72,7 +72,7 @@
             text-decoration: underline;
         }
         .course-box {
-            margin: 18px 0 0 0;
+            margin: 18px 36px 0 0;
             height: 248px;
             width: 248px;
             border-radius: 10px;
@@ -100,14 +100,30 @@
             font-weight: 700;
             line-height: 14.63px;
         }
-        #add-course {
+        #add-course-margin {
             margin: 18px 0 0 0;
+        }
+        #add-course {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 19.5px;
+            color: #F39835;
+            text-decoration: none;
+        }
+        #add-course-button {
+            margin: 0 0 10px 0;
+        }
+        #add-course:hover {
+            color: #D5852E;
+            text-decoration: underline;
         }
         #add-course .add-course-default {
             display: inline-block;
+            text-decoration: none;
         }
         #add-course:hover .add-course-default {
             display: none;
+            text-decoration: underline;
         }
         #add-course .add-course-hover {
             display: none;
@@ -204,13 +220,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-1">
+                    <div id="add-course-margin" class="col-1 d-flex align-items-center">
                         <a href="#" id="add-course" class="text-center">
                             <div id="add-course-button">
                                 <img src="img/add-course-button-default.svg" alt="Add Course" class="add-course-default">
                                 <img src="img/add-course-button-hover.svg" alt="Add Course Hover" class="add-course-hover">
                             </div>
-                            <div >
+                            <div>
                                 <span>Add Course</span>
                             </div>
                         </a>
