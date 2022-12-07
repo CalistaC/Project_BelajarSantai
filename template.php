@@ -16,6 +16,7 @@
     <style>
         body {
             background-color: #FFFFFF;
+            color: #000000;
             font-family: Montserrat;
             font-size: 100%;
         }
@@ -125,7 +126,7 @@
             font-family: montserrat;
             font-weight: 600; /* semibold */
         }
-        .list-group-item:hover:not(.active), .active {
+        .list-group-item:hover:not(.active), .list-group-item.active {
             background-color: #E6F1FD !important;
             color: #3590F3 !important;
         }

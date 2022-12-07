@@ -153,8 +153,8 @@
         }
         .instructor-detail {
             display: inline-block;
-            width: 27.5rem; /* 440px */
-            margin: 0 0 0 1.5rem;
+            margin: 0 1.5rem 0 1.5rem;
+            padding: 0;
             font-size: 1rem;
             font-weight: 500;
             line-height: 1.219rem; /* 19.5px */
@@ -247,9 +247,11 @@
                 </div> 
                 <div class="col-12">
                     <div class="col-7 instructor-box">
-                        <div class="instructor-pic"></div>
-                        <div class="instructor-detail align-items-center">
-                            <span>Justin Thames memiliki minat terkait statistika dan pengolahan data menggunakan bahasa pemrograman Python. Salah satu penelitian yang pernah dilakukan dalam topik analisis data adalah dengan menggunakan bahasa pemrograman Python dan aplikasi Rapid Miner.</span>
+                        <div class="row" style="margin: 0; padding: 0;">
+                            <div class="instructor-pic"></div>
+                            <div class="col instructor-detail d-flex align-items-center">
+                                <span>Justin Thames memiliki minat terkait statistika dan pengolahan data menggunakan bahasa pemrograman Python. Salah satu penelitian yang pernah dilakukan dalam topik analisis data adalah dengan menggunakan bahasa pemrograman Python dan aplikasi Rapid Miner.</span>
+                            </div> 
                         </div>
                     </div>
                 </div>
