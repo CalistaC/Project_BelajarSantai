@@ -58,6 +58,10 @@
             margin: 2rem 0 0 0;
             padding: 0;
         }
+        a.course {
+            color: #000000;
+            text-decoration: none;
+        }
         .page-tabs {
             font-size: 1.563rem; /* 25px */
             font-weight: 700;
@@ -133,11 +137,11 @@
         }
         .instructor-box {
             margin: 2.125rem 0 4.125rem 0; /* 34px 0 66px 0 */
-            width: 41.5rem; /* 664px */
             height: 10rem; /* 160px */
             border-radius: 0.625rem; /* 10px */
             border: 0.063rem solid rgba(217, 217, 217, 0.5);
             box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 8px 8px 0px rgba(0, 0, 0, 0.09), 0px 17px 10px 0px rgba(0, 0, 0, 0.05), 0px 31px 12px 0px rgba(0, 0, 0, 0.01),  0px 48px 14px 0px rgba(0, 0, 0, 0);
+            display: inline-block;
         }
         .instructor-pic {
             width: 10rem; /* 160px */
@@ -155,6 +159,7 @@
             font-weight: 500;
             line-height: 1.219rem; /* 19.5px */
             text-align: justify;
+            display: inline-block;
         }
     </style>
 </head>
@@ -210,7 +215,7 @@
                 <div class="col-12 d-flex">
                     <!-- Kyknya bs taru looping utk generate boxnya -->
                     <div class="col-3 course-box">
-                        <div class="course"> 
+                        <a href="course-detail.php" class="course">
                             <!-- Kayaknya ini isi2nya bs pake db -->
                             <div class="course-pic"></div>
                             <div class="course-name-instructor text-center">
@@ -218,7 +223,7 @@
                                 <br>
                                 <span id="course-instructor">Instruktur: <span style="font-weight: 600;">Justin Thames</span></span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div id="add-course-margin" class="col-1 d-flex align-items-center">
                         <a href="courses.php" id="add-course" class="text-center">
@@ -241,9 +246,9 @@
                     <a href="#" class="page-tabs-link">Instruktur Kami</a>
                 </div> 
                 <div class="col-12">
-                    <div class="col instructor-box">
+                    <div class="col-7 instructor-box">
                         <div class="instructor-pic"></div>
-                        <div class="instructor-detail">
+                        <div class="instructor-detail align-items-center">
                             <span>Justin Thames memiliki minat terkait statistika dan pengolahan data menggunakan bahasa pemrograman Python. Salah satu penelitian yang pernah dilakukan dalam topik analisis data adalah dengan menggunakan bahasa pemrograman Python dan aplikasi Rapid Miner.</span>
                         </div>
                     </div>

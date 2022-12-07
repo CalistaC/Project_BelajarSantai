@@ -15,8 +15,12 @@
             margin: 0;
             padding: 0;
         }
+        a.course {
+            color: #000000;
+            text-decoration: none;
+        }
         #available-courses {
-            margin: 2.5rem 0 0 0;
+            margin: 2.5rem 0 2rem 0;
             padding: 0;
         }
         .page-tabs {
@@ -55,13 +59,17 @@
             line-height: 0.914rem; /* 14.63px */
         }
         #available-courses-pic {
-            margin: 2.5rem 0 1.5rem 0;
+            margin: 2rem 0 1rem 0;
+            display: block;
+            width: initial;
+            height: initial;
         }
         #available-courses-text {
             font-size: 1.25rem;
             font-weight: 600;
             line-height: 1.524rem;
             color: #3590F3;
+            display: block;
         }
     </style>
 </head>
@@ -77,7 +85,7 @@
                 <div class="col-12 d-flex">
                     <!-- Kyknya bs taru looping utk generate boxnya -->
                     <div class="col-3 course-box">
-                        <div class="course"> 
+                        <a href="course-detail.php" class="course">
                             <!-- Kayaknya ini isi2nya bs pake db -->
                             <div class="course-pic"></div>
                             <div class="course-name-instructor text-center">
@@ -85,7 +93,7 @@
                                 <br>
                                 <span id="course-instructor">Instruktur: <span style="font-weight: 600;">Justin Thames</span></span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -96,9 +104,11 @@
                 <div class="col-12 page-tabs">
                     Kursus yang Tersedia
                 </div>
-                <div class="col justify-content-center">
+                <div class="col-12 d-flex justify-content-center">
                     <img id="available-courses-pic" src="img/no-course-available.svg" alt="no courses available">
-                    <div id="available-courses-text" class="row">Tidak ada kursus yang tersedia saat ini :(</div>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <div id="available-courses-text">Tidak ada kursus yang tersedia saat ini :(</div>
                 </div>
             </div>
         </div>
