@@ -45,7 +45,7 @@
             height: 25rem;
             color: #FFFFFF;
             border: 1px solid rgba(217, 217, 217, 0.5);
-            border-radius: 10px;    
+            border-radius: 0.625rem;    
         }
         a.topic-num {
             color: #000000;
@@ -84,6 +84,28 @@
             height: 9rem; /* 144px */
             background-color: #3590F3;
             border-radius: 0.625rem;
+        }
+        .file {
+            margin: 1rem 0 0 0;
+            padding: 0;
+            display: inline-block;
+        }
+        #topic-content-checkbox {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0;
+            border: 3px solid #F39835;
+        }
+        #topic-content-checkbox:checked {
+            background-color: #F39835;
+        }
+        .topic-content-link {
+            color: #000000;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            display: inline-block;
+            margin: 0 0 0 0.5rem;
         }
     </style>
 </head>
@@ -135,11 +157,9 @@
                     <div class="col-12 topic-title">Topic 1</div>
                     <div class="col-12 topic-name">Pengenalan Statistika</div>
                     <div class="col-12 topic-video"></div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            <a>LINK</a>
-                        </label>
+                    <div class="col-12 file d-flex align-items-center">
+                        <input class="form-check-input" type="checkbox" value="" id="topic-content-checkbox">
+                        <a href="#" class="topic-content-link">Slide Pengenalan Statistika</a>
                     </div>
                 </div>
             </div>
