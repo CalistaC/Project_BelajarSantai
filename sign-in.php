@@ -47,16 +47,16 @@
         </style>
     </head>
     <body class="container-fluid d-flex main_container justify-content-center align-items-center">
-        <div id="main-box" class="justify-content-center container">
-            <div class="row">
+        <div id="main-box" class="container">
+            <div class="row d-flex justify-content-center">
                 <div class="col-12">
                     <!-- Image -->
-                    <img src="img/belajarsantailogo-header.svg" alt="logobelajarsantai" style="width: 7.5rem; height: 7.5rem; display: block; margin: 1.5rem 0 0 0;">
+                    <img src="img/belajarsantailogo-header.svg" alt="logobelajarsantai" style="width: 7.5rem; height: 7.5rem; display: block; margin: 1.5rem 0 0 0; text-align: center; ">
                 </div>
             </div>
             <br>
 
-            <div class="row">
+            <div class="row d-flex justify-content-center">
                 <div class="col-12">
                     <!-- Welcome -->
                     <span id="welcome">
