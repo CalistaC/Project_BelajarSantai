@@ -184,7 +184,7 @@
                 <button type="button" class="list-group-item list-group-item-action <?php if($this_page=='kursus' or $this_page=='kursus-detail'){echo 'active';}?>" onclick="location.href='courses.php'">
                     Kursus
                 </button>
-                <button type="button" class="list-group-item list-group-item-action <?php if($this_page=='tentang-kami'){echo 'active';}?>" onclick="location.href='#'">
+                <button type="button" class="list-group-item list-group-item-action <?php if($this_page=='tentang-kami'){echo 'active';}?>" onclick="location.href='about-us.php'">
                     Tentang Kami
                 </button>
             </nav>
