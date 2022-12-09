@@ -1,12 +1,16 @@
-<?php session_start();
+<?php 
+session_start();
 
-$conn = mysqli_connect('localhost','20si1','belajarsantai');
+$server = "localhost";
+$username = "20si1";
+$password = "uphmedan";
+$db = "belajarsantai";
+
+$conn = mysqli_connect($server, $username, $password, $db);
 
 if(!$conn){
     die('Database tidak terhubung');
 }
-
-$db = $conn->select_db('20si1');
 
 function is_logged_in(){
     if(isset($_SESSION['username'])){

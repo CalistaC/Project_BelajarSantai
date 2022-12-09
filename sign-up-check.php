@@ -1,26 +1,25 @@
 <?php 
     include "config.php";
 
-    if ($_POST['password'] == $_POST['confirm_password']){
+    if ($_POST['password'] == $_POST['recon-password']){
     	$username = mysqli_real_escape_string($conn, $_POST['username']);
+		$email = $_POST['email'];
 		$password = strip_tags($_POST['password']);
 		$password = sha1($password);
-		// $no_handphone = mysqli_real_escape_string($conn, $_POST['no_handphone']);
 
 	    $cek_user = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM user WHERE username= '$username'"));
 	    $no_id = mysqli_num_rows(mysqli_query($conn, "SELECT userid FROM user")) + 1;
 	    if ($cek_user > 0) {
-			// Pop-up versi CSS
-			header('Location: register.php#usernameusederror');
-	        // echo '<script language="javascript">
-	        //       alert ("Username sudah ada yang menggunakan");
-	        //       window.location="register.php";
-	        //       </script>';
-	        //       exit();
+	        echo '<script language="javascript">
+	              alert ("Username sudah ada yang menggunakan");
+	              window.location="sign-up.php";
+	              </script>';
+	              exit();
 	    }
 	    else {
-	        $sql = "INSERT INTO user(userid, username, email, password) VALUES ('$no_id','$username', '$password', '$no_handphone')";
+	        $sql = "INSERT INTO user(userid, username, email, password) VALUES ('$no_id','$username','$email','$password')";
 	        if (mysqli_query($conn, $sql)){
+				echo($no_id);
 				// Pop-up versi javascript
 	        	echo '<script language="javascript">
 	              alert ("Registrasi berhasil dilakukan!");
@@ -32,8 +31,8 @@
     } else {
 		// Pop-up versi javascript
 		echo '<script language="javascript">
-			alert("Password dan Konfirmasi Password tidak sama!\n Mohon isi kembali");
-			window.location="register.php";
+			alert("Password dan Konfirmasi Password tidak sama!\nMohon isi kembali");
+			window.location="sign-up.php";
 			</script>';
 		exit();
 	}

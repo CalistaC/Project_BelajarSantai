@@ -1,11 +1,11 @@
 <?php
-    $this_page='kursus-detail'; /* Ingat pindahin ke dalam if logged in nya ya */
-    require("template.php"); /* Ingat pindahin ke dalam if logged in nya ya */
-
     // Authentication
-    // require('../config.php');
-    // if(is_logged_in()){
+    require('config.php');
+    if(is_logged_in()){
+        $this_page='kursus-detail'; /* Ingat pindahin ke dalam if logged in nya ya */
+        require("template.php"); /* Ingat pindahin ke dalam if logged in nya ya */
 ?>
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,7 +172,7 @@
 
 <?php  
 // Authentication
-// } else {
-//     header('Location: ../index.php');
-// }
+} else {
+    header('Location: index.php');
+}
 ?>

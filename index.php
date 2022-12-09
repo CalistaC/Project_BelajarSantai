@@ -133,7 +133,7 @@
             </div>
         </div>
 
-        <form action="">
+        <form action="sign-in-check.php" method="POST">
             <div class="row">
                 <div class="label-form col-12 text-start">
                     <!-- Label -->
@@ -154,14 +154,14 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <input type="text" id="password" name="password">
+                    <input type="password" id="password" name="password">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12">
                     <!-- Submit -->
-                    <input id="masuk-button" type="submit" value="Masuk">
+                    <input id="masuk-button" type="submit" value="Masuk" href="home.php">
                 </div>
             </div>
         </form>

@@ -161,10 +161,10 @@
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="img/account-icon.svg" alt="Account Icon" class="account-img">
-                        <span class="align-middle">Juvita Theodra</span>
+                        <span class="align-middle"><?php echo $_SESSION['username'];?></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
-                        <a class="dropdown-item" href="index.php">
+                        <a class="dropdown-item" href="logout.php">
                             <img src="img/logout-default.svg" alt="Account Icon" class="logout logout-default">
                             <img src="img/logout-hover.svg" alt="Account Icon Hover" class="logout logout-hover">
                             Logout

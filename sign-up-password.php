@@ -14,7 +14,7 @@
     <!-- Bootstrap's JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-    <title>BelajarSantai | Sign In</title>
+    <title>BelajarSantai | Sign Up</title>
 
     <style>
         body {
@@ -55,14 +55,14 @@
         .label-form {
             padding: 0 0 0 4.5rem;
         }
-        label#userid-label, label#username-label {
+        label#password-label, label#recon-password-label {
             margin: 1rem 0 0 0;
             font-weight: 600;
             font-size: 1rem;
             line-height: 1.25rem;
             text-align: left;
         }
-        input#userid, input#username {
+        input#password, input#recon-password {
             width: 25rem;
             height: 2.5rem;
             border: 2px solid #3590F3;
@@ -133,44 +133,48 @@
             </div>
         </div>
 
-        <form action="">
+        <form action="sign-up-check.php" method="POST">
             <div class="row">
                 <div class="label-form col-12 text-start">
                     <!-- Label -->
-                    <label id="userid-label" for="userid">Username atau email</label>
+                    <label id="password-label" for="password">Password</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <!-- Input box -->
-                    <input type="text" id="userid" name="userid" value="">
+                    <input type="password" id="password" name="password" value="">
                 </div>
             </div>
             <div class="row">
                 <div class="label-form col-12 text-start">
                     <!-- Label -->
-                    <label id="username-label" for="username">Username</label>
+                    <label id="recon-password-label" for="recon-password">Konfirmasi Password</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <input type="text" id="username" name="username">
+                    <input type="password" id="recon-password" name="recon-password">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12">
+                    <!-- Input to post email and username credentials to sign-up-check.php -->
+                    <input type="hidden" id="email" name="email" value="<?php echo $_POST['email']?>">
+                    <input type="hidden" id="username" name="username" value="<?php echo $_POST['username']?>">
                     <!-- Submit -->
-                    <input id="lanjut-button" type="submit" value="Masuk">
+                    <input id="lanjut-button" type="submit" value="Lanjut" href="index.php">
                 </div>
             </div>
         </form>
 
         <div class="row sign-acc-row">
             <div class="col-12">
-                <span id="sign-acc-q">Sudah mempunyai akun? <a href="sign-in.php" id="sign-acc">Masuk</a></span>
+                <span id="sign-acc-q">Sudah mempunyai akun? <a href="indexhp" id="sign-acc">Masuk</a></span>
             </div>
         </div>
     </div>
 </body>
+
 </html>

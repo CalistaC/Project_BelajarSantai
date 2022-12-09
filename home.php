@@ -1,10 +1,9 @@
 <?php
-    $this_page='beranda'; /* Ingat pindahin ke dalam if logged in nya ya */
-    require("template.php"); /* Ingat pindahin ke dalam if logged in nya ya */
-
     // Authentication
-    // require('../config.php');
-    // if(is_logged_in()){
+    require('config.php');
+    if(is_logged_in()){
+        $this_page='beranda'; /* Ingat pindahin ke dalam if logged in nya ya */
+        require("template.php"); /* Ingat pindahin ke dalam if logged in nya ya */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -171,7 +170,7 @@
         <!-- User Greeting -->
         <div class="row">
             <div id="greeting" class="col">
-                <span>Selamat datang <span id="acc-name">Juvita Theodra</span></span>
+                <span>Selamat datang <span id="acc-name"><?php echo $_SESSION['username'];?></span></span>
                 <br>
                 <span id="greeting-bottom">Mari belajar!</span>
             </div>
@@ -182,6 +181,24 @@
             <div id="overview-box" class="col-11">
                 <div id="overview-upper-text">Anda memiliki... </div>
                 <div id="overview-content" class="container">
+                    <!-- Overview Content Box Code -->
+                    <?php
+                    // Number of videos not watched
+                    $query_video_num = "SELECT * FROM statistika WHERE video_watched = 0";
+                    $result_video_num = mysqli_query($conn, $query);
+                    $video_num = mysqli_num_rows($result_video_num);
+
+                    // Number of files not accessed
+                    $query_file_num = "SELECT * FROM statistika WHERE file_accessed = 0";
+                    $result_file_num = mysqli_query($conn, $query);
+                    $file_num = mysqli_num_rows($result_file_num);
+
+                    // Number of videos not watched
+                    $query_video_num = "SELECT * FROM statistika WHERE video_watched = 0";
+                    $result_video_num = mysqli_query($conn, $query);
+                    $video_num = mysqli_num_rows($result_video_num);
+                    
+                    ?>
                     <div class="row text-center">
                         <div class="col-3"></div>
                         <div class="col">
@@ -213,18 +230,33 @@
                     <a href="courses.php" class="page-tabs-link">Kursus Saya</a>
                 </div> 
                 <div class="col-12 d-flex">
-                    <!-- Kyknya bs taru looping utk generate boxnya -->
+                    <!-- Loop to generate Topic Box -->
+                    <?php
+                    $query = "SELECT * FROM course ORDER BY course_id";
+                    $result = mysqli_query($conn, $query);
+
+                    // Check if there is error when running query
+                    if(!$result){
+                        die ("Query Error: ".mysqli_errno($conn)." - ".mysqli_error($conn));
+                    }
+                    
+                    // Query result will be printed with while loop
+					while($row = mysqli_fetch_assoc($result)){
+                    ?>
                     <div class="col-3 course-box">
                         <a href="course-detail.php" class="course">
                             <!-- Kayaknya ini isi2nya bs pake db -->
                             <div class="course-pic"></div>
                             <div class="course-name-instructor text-center">
-                                <span id="course-title">Statistika</span>
+                                <span id="course-title"><?php echo $row['course_name']; ?></span>
                                 <br>
-                                <span id="course-instructor">Instruktur: <span style="font-weight: 600;">Justin Thames</span></span>
+                                <span id="course-instructor">Instruktur: <span style="font-weight: 600;"><?php echo $row['instructor']; ?></span></span>
                             </div>
                         </a>
                     </div>
+                    <?php
+                    }
+                    ?>
                     <div id="add-course-margin" class="col-1 d-flex align-items-center">
                         <a href="courses.php" id="add-course" class="text-center">
                             <div id="add-course-button">
@@ -265,7 +297,7 @@
 
 <?php  
 // Authentication
-// } else {
-//     header('Location: ../index.php');
-// }
+} else {
+    header('Location: index.php');
+}
 ?>
