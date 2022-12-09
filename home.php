@@ -183,36 +183,35 @@
                 <div id="overview-content" class="container">
                     <!-- Overview Content Box Code -->
                     <?php
-                    // Number of videos not watched
-                    $query_video_num = "SELECT * FROM statistika WHERE video_watched = 0";
-                    $result_video_num = mysqli_query($conn, $query);
-                    $video_num = mysqli_num_rows($result_video_num);
+                    // Number of courses
+                    $query_cour_num = "SELECT * FROM course";
+                    $result_cour_num = mysqli_query($conn, $query_cour_num);
+                    $cour_num = mysqli_num_rows($result_cour_num);
 
                     // Number of files not accessed
-                    $query_file_num = "SELECT * FROM statistika WHERE file_accessed = 0";
-                    $result_file_num = mysqli_query($conn, $query);
+                    $query_file_num = "SELECT * FROM statistika WHERE topic_file IS NOT NULL";
+                    $result_file_num = mysqli_query($conn, $query_file_num);
                     $file_num = mysqli_num_rows($result_file_num);
 
                     // Number of videos not watched
-                    $query_video_num = "SELECT * FROM statistika WHERE video_watched = 0";
-                    $result_video_num = mysqli_query($conn, $query);
+                    $query_video_num = "SELECT * FROM statistika WHERE video IS NOT NULL";
+                    $result_video_num = mysqli_query($conn, $query_video_num);
                     $video_num = mysqli_num_rows($result_video_num);
-                    
                     ?>
                     <div class="row text-center">
                         <div class="col-3"></div>
                         <div class="col">
-                            <span class="overview-content-num">3</span>
+                            <span class="overview-content-num"><?php echo $cour_num;?></span>
                             <br>
                             <span class="overview-content-title">Kursus</span>
                         </div>
                         <div class="col">
-                            <span class="overview-content-num">2</span>
+                            <span class="overview-content-num"><?php echo $file_num;?></span>
                             <br>
-                            <span class="overview-content-title">Tugas</span>
+                            <span class="overview-content-title">Files</span>
                         </div>
                         <div class="col">
-                            <span class="overview-content-num">1</span>
+                            <span class="overview-content-num"><?php echo $video_num;?></span>
                             <br>
                             <span class="overview-content-title">Video</span>
                         </div>
@@ -245,7 +244,6 @@
                     ?>
                     <div class="col-3 course-box">
                         <a href="course-detail.php" class="course">
-                            <!-- Kayaknya ini isi2nya bs pake db -->
                             <div class="course-pic"></div>
                             <div class="course-name-instructor text-center">
                                 <span id="course-title"><?php echo $row['course_name']; ?></span>

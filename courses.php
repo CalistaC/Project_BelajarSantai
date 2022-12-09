@@ -83,18 +83,33 @@
             <div id="courses">
                <div class="col-12 page-tabs">Kursus Saya</div> 
                 <div class="col-12 d-flex">
-                    <!-- Kyknya bs taru looping utk generate boxnya -->
+                    <!-- Loop to generate Topic Box -->
+                    <?php
+                    $query = "SELECT * FROM course ORDER BY course_id";
+                    $result = mysqli_query($conn, $query);
+
+                    // Check if there is error when running query
+                    if(!$result){
+                        die ("Query Error: ".mysqli_errno($conn)." - ".mysqli_error($conn));
+                    }
+                    
+                    // Query result will be printed with while loop
+					while($row = mysqli_fetch_assoc($result)){
+                    ?>
                     <div class="col-3 course-box">
                         <a href="course-detail.php" class="course">
                             <!-- Kayaknya ini isi2nya bs pake db -->
                             <div class="course-pic"></div>
                             <div class="course-name-instructor text-center">
-                                <span id="course-title">Statistika</span>
+                                <span id="course-title"><?php echo $row['course_name']; ?></span>
                                 <br>
-                                <span id="course-instructor">Instruktur: <span style="font-weight: 600;">Justin Thames</span></span>
+                                <span id="course-instructor">Instruktur: <span style="font-weight: 600;"><?php echo $row['instructor']; ?></span></span>
                             </div>
                         </a>
                     </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
