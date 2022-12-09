@@ -168,10 +168,9 @@
 
         <div class="row sign-acc-row">
             <div class="col-12">
-                <span id="sign-acc-q">Sudah mempunyai akun? <a href="index.php" id="sign-acc">Masuk</a></span>
+                <span id="sign-acc-q">Sudah mempunyai akun? <a href="sign-in.php" id="sign-acc">Masuk</a></span>
             </div>
         </div>
     </div>
 </body>
-
 </html>

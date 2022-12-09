@@ -27,20 +27,12 @@
 
         #main-box {
             background-color: #FFFFFF;
-            width: 32.5rem;
-            /* 520px */
-            height: 35rem;
-            /* 560px */
+            width: 32.5rem; /* 520px */
+            height: 35rem; /* 560px */
             border-radius: 10px;
             padding: 0;
             margin: 0;
             text-align: center;
-        }
-
-        .form-text-box {
-            width: 400px;
-            height: 40px;
-            background-color: hotpink;
         }
 
         #welcome {
@@ -60,11 +52,15 @@
         }
 
         /* Form */
+        .label-form {
+            padding: 0 0 0 4.5rem;
+        }
         label#userid-label, label#password-label {
             margin: 1rem 0 0 0;
             font-weight: 600;
             font-size: 1rem;
             line-height: 1.25rem;
+            text-align: left;
         }
         input#userid, input#password {
             width: 25rem;
@@ -72,6 +68,7 @@
             border: 2px solid #3590F3;
             border-radius: 0.625rem;
             margin: 0.5rem 0 0 0;
+            padding: 0 1rem;
         }
         input#masuk-button {
             width: 13rem;
@@ -138,21 +135,26 @@
 
         <form action="">
             <div class="row">
+                <div class="label-form col-12 text-start">
+                    <!-- Label -->
+                    <label id="userid-label" for="userid">Username atau email</label>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-12">
-                    <!-- Form -->
-                    <label id="userid-label" for="userid">Username atau email:</label>
-                    <br>
+                    <!-- Input box -->
                     <input type="text" id="userid" name="userid" value="">
                 </div>
             </div>
-
+            <div class="row">
+                <div class="label-form col-12 text-start">
+                    <!-- Label -->
+                    <label id="password-label" for="password">Password</label>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12">
-                    <!-- Form -->
-                    <label id="password-label" for="password">Password:</label>
-                    <br>
-                    <input type="text" id="password" name="password" value="">
-
+                    <input type="text" id="password" name="password">
                 </div>
             </div>
 

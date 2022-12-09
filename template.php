@@ -164,7 +164,7 @@
                         <span class="align-middle">Juvita Theodra</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
-                        <a class="dropdown-item" href="">
+                        <a class="dropdown-item" href="index.php">
                             <img src="img/logout-default.svg" alt="Account Icon" class="logout logout-default">
                             <img src="img/logout-hover.svg" alt="Account Icon Hover" class="logout logout-hover">
                             Logout
